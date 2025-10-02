@@ -1,6 +1,7 @@
 # Update-bookworm-to-trixie
 In-place update from Raspberry Pi OS bookworm to trixie (according to https://forums.raspberrypi.com/viewtopic.php?t=389477 and other sources)
 
+```bash
 sudo apt purge -y raspberrypi-ui-mods
 ## Make sure that you have purged
 #sudo dpkg -P raspberrypi-ui-mods 
@@ -12,3 +13,4 @@ sudo sed -i.bak 's/bookworm/trixie/g' /etc/apt/sources.list /etc/apt/sources.lis
 sudo apt update
 sudo apt full-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" --purge --auto-remove
 sync
+```
