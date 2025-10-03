@@ -4,7 +4,6 @@ In-place update from Raspberry Pi OS bookworm to trixie (according to https://fo
 ```bash
 sudo apt purge -y raspberrypi-ui-mods
 ## Make sure that this purged
-#sudo dpkg -P raspberrypi-ui-mods 
 #sudo dpkg -P lxplug-batt
 #sudo dpkg -P lxplug-cpu
 #sudo apt autoremove -y
