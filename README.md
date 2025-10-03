@@ -21,10 +21,10 @@ Now, execute for every prompt:
 5. Exit 'Z' and, back at prompt, choose install maintainer’s version.
 
 Thus, we have
-* ```/etc/foo.conf``` now = new baseline + your edits.\
+* ```/etc/foo.conf``` now = new baseline + your edits.
 * ```/etc/foo.conf.dpkg-old``` = your old Bookworm file.
 
-Alternatively, you may want to make it silent and automatic with\
+Alternatively, you may want to make it silent and automatic with
 ```bash
 #sudo apt full-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" --purge --auto-remove
 ```
