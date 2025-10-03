@@ -15,9 +15,9 @@ sudo apt full-upgrade --purge --auto-remove
 
 Now, execute for every prompt:
 1. At dpkg prompt, choose 'Z'.
-2. In parallel SSH session run ```diff -u /etc/foo.conf /etc/foo.conf.dpkg-dist```.
+2. In parallel SSH session run ```diff -u /etc/foo.conf /etc/foo.conf.dpkg-new```.
 3. In 'Z' shell edit maintainer's new  ```/etc/foo.conf.dpkg-dist```, add your tweaks and mark them.
-4. Test syntax using the edited .dpkg-dist.
+4. Test syntax using the edited .dpkg-new.
 5. Exit 'Z' and, back at prompt, choose install maintainer’s version.
 
 Thus, we have
