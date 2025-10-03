@@ -1,4 +1,4 @@
-# Update-bookworm-to-trixie
+# Update from Raspberry Pi OS Debian bookworm to trixie
 In-place update from Raspberry Pi OS bookworm to trixie (according to https://forums.raspberrypi.com/viewtopic.php?t=389477 and other sources)
 
 ```bash
@@ -30,4 +30,7 @@ Alternatively, you may want to make it silent and automatic with\
 ```bash
 #sudo apt full-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" --purge --auto-remove
 ```
+
+Lastly, you can add ```rpd-applications```, ```rpd-common```, ```rpd-developer```, ```rpd-graphics```, ```rpd-plym-splash```, ```rpd-preferences```, ```rpd-theme```, ```rpd-utilities```, ```rpd-wallpaper*```, ```rpd-wayland-*```, ```rpd-x-*``` to your liking
+
 End with ```sync``` to be extra safe.
