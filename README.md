@@ -13,7 +13,27 @@ sudo sed -i.bak 's/bookworm/trixie/g' /etc/apt/sources.list /etc/apt/sources.lis
 sudo apt update
 ## I prefer to do the upgrade interactively
 sudo apt full-upgrade --purge --auto-remove
-## Other may want to make it silent and automatic
+```
+Then do this for every prompt:
+
+At dpkg prompt, choose 'Z'.
+
+In parallel SSH session run ```diff -u /etc/foo.conf /etc/foo.conf.dpkg-dist```.
+
+In 'Z' shell edit maintainer's new  ```/etc/foo.conf.dpkg-dist```, add your tweaks and mark them.
+
+Test syntax using the edited .dpkg-dist.
+
+Exit 'Z' and, back at prompt, choose install maintainer’s version.
+
+Now we have
+
+```/etc/foo.conf``` now = new baseline + your edits.
+
+```/etc/foo.conf.dpkg-old``` = your old Bookworm file.
+
+Alternatively, you may want to make it silent and automatic with
+```bash
 #sudo apt full-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" --purge --auto-remove
 sync
 ```
